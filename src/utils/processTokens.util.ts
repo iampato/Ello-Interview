@@ -20,6 +20,7 @@ export function processContent(
       contentIndex >= tokens[tokenIndex].position[0]
     ) {
       const [start, end] = tokens[tokenIndex].position;
+      // console.log("start ->", start, "end ->", end, "contentIndex ->", contentIndex);
 
       if (contentIndex === start) {
         result.push({
@@ -28,8 +29,10 @@ export function processContent(
           content: content.slice(start, end),
           isTappable: true,
         });
+        // start for the next iteration updated to the end of the token position
         contentIndex = end;
       } else {
+        // console.log("Char under else ->", char);
         result.push({
           index: null,
           token: null,
@@ -40,6 +43,8 @@ export function processContent(
       }
 
       if (contentIndex === end) {
+        // move to the next token
+        // console.log("move to the next token");
         tokenIndex++;
       }
     } else {
