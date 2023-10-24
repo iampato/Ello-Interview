@@ -8,7 +8,7 @@
     "license": "MIT",
     "scripts": {
       "build": "rimraf ./dist  && tsc  && cp .env ./dist/.env",
-      "dev": "nodemon",
+      "dev": "yarn build && yarn start",
       "start": "node dist/main.js",
       "test": "jest"
     },
