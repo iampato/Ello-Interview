@@ -46,7 +46,7 @@ async function startApolloServer() {
     });
 
     // Start the Express application on the specified port
-    const port = process.env.PORT || 4000;
+    const port = process.env.PORT || 9007;
     app.listen(port, () =>
       console.log(`Server running at http://localhost:${port}`)
     );
