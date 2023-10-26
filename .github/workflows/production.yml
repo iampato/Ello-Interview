@@ -43,11 +43,16 @@ jobs:
         with:
           terraform_version: "1.1.7"
 
+      - name: Add profile credentials to ~/.aws/credentials
+        run: |
+          aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }} --profile patrick1
+          aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }} --profile patrick1
+
       - name: Initialize Terraform
         run: cd deployment && terraform init
 
       - name: Plan Changes
-        run: cd deployment && terraform plan -out=tfplan
+        run: cd deployment && terraform plan
 
       - name: Apply Changes
         run: cd deployment && terraform apply -auto-approve tfplan
