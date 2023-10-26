@@ -1,4 +1,4 @@
-name: Deploy Ello API to AWS AppRunner Production Environment
+name: Deploy Ello API to AWS ECS Production Environment
 
 # run on PR merged into main branch
 on:
