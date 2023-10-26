@@ -2,3 +2,6 @@
 dist/
 node_modules/
 *.lock
+deployment/.terraform/
+deployment/.terraform.lock.hcl
+deployment/terraform.tfstate.backup
