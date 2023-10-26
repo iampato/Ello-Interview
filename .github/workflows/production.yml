@@ -25,6 +25,12 @@ jobs:
         with:
           mask-password: 'false'
 
+      # create an .env file and add the following variables PORT=9007
+      - name: touch .env
+        run: |
+          touch .env
+          echo "PORT=9007" >> .env
+        
       - name: Build and Push Docker Image
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
