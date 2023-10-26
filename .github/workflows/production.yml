@@ -55,7 +55,7 @@ jobs:
         run: cd deployment && terraform plan
 
       - name: Apply Changes
-        run: cd deployment && terraform apply -auto-approve tfplan
+        run: cd deployment && terraform apply 
 
       - name: Clean Up
-        run: cd deployment && rm tfplan 
+        run: cd deployment 
