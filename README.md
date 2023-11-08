@@ -16,7 +16,7 @@ A nodejs Application
 Download or clone this repo by using the link below:
 
 ```
-[https://github.com/iampato/magic.git](https://github.com/iampato/probable-octo-couscous.git)
+[https://github.com/iampato/probable-octo-couscous.git](https://github.com/iampato/probable-octo-couscous.git)
 ```
 
 **Step 2:**
